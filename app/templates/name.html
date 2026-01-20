@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>Inventory System</title>
+</head>
+<body>
+    
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('view_all') }}">View All Items</a>
+        <a href="{{ url_for('view_specific') }}">View Specific Items</a>
+        <a href="{{ url_for('add') }}">Add Item</a>
+        <a href="{{ url_for('update') }}">Update Item</a>
+        <a href="{{ url_for('delete') }}">Delete Item</a>
+    </nav>
+
+    <div class="home-container" id="homeHeader">
+        <h1>Welcome to the Inventory Management System!</h1>
+    </div>
+        <div class="home-container">
+            <div class="home-card">  
+                <button class="homebutton"><a href="{{ url_for('view_all') }}">View All Items</a></button>
+            </div>
+
+            <div class="home-card">
+                <button class="homebutton"><a href="{{ url_for('view_specific') }}">View Specific Items</a></button>
+            </div>
+
+            <div class="home-card">
+                
+                <button class="homebutton"><a href="{{ url_for('add') }}">Add Item</a></button>
+            </div>
+        
+            <div class="home-card">
+                <button class="homebutton"><a href="{{ url_for('update') }}">Update Item</a></button>
+            </div>
+
+            <div class="home-card">
+                <button class="homebutton"><a href="{{ url_for('delete') }}">Delete Item</a></button>
+            </div>
+        </div>
+</body>
+
+        <footer>
+            <div class="footer-div"> 
+                <h2>LOGISTOCK</h2> 
+                <img src="static/logo.png" alt="Logo"> 
+            </div>
+        </footer>
+
+</html>
